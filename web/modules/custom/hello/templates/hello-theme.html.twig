@@ -6,8 +6,13 @@
 
   {% for w in data.window %}
 <div class="new-out">
-    <div class="title"> {{ w.title }} </div>
+  <a href="{{ base_url }}/news/{{ w.id }}" class="a-title"><div class="title">{{ w.title }} </div></a>
+  <hr>
     <div class="content" > {{ w.content | raw }} </div>
+
+  <div class="date">
+    <p>Created: {{ w.date }}</p>
+  </div>
 </div>
   {% endfor %}
 

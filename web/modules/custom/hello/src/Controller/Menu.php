@@ -21,7 +21,7 @@ class Menu {
           'url' => 'welcome',
           'img' => 'contact.swg',
           'style' => 'contact_swg',
-          'name' => 'Головна',
+          'name' => 'Про нас',
           'active' => $active_page === 'home' ? 'active' : null,
         ),
     );

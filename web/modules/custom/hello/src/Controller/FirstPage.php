@@ -16,11 +16,11 @@ class FirstPage extends ControllerBase {
     $menu = \Drupal\hello\Controller\Menu::menu_data('home');
 
     $news = array();
-    $query = \Drupal::database()->query("SELECT `id`, `name`, `description_small` FROM `a_news` ORDER BY `date_create`DESC");
+    $query = \Drupal::database()->query("SELECT `id`, `name`, `description_small`, `date_create` FROM `a_news` ORDER BY `date_create`DESC");
     $result = $query -> fetchAll();
 
     foreach ($result as $row) {
-      array_push($news, ['id' => $row->id,'title' => $row->name,'content' => $row->description_small,]);
+      array_push($news, ['id' => $row->id,'title' => $row->name,'content' => $row->description_small, 'date' => $row->date_create,]);
     }
 
     $data = array(

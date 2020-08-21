@@ -5,3 +5,12 @@ drupal8.first_page:
     _title: 'Welcome'
   requirements:
     _permission: 'access content'
+
+hello.news:
+  path: '/news/{id}'
+  defaults:
+    _controller: '\Drupal\hello\Controller\SingleNews::get_news'
+    _title: 'Long News'
+  requirements:
+    _access: 'TRUE'
+    id: \d+

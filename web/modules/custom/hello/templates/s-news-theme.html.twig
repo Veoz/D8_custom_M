@@ -1,0 +1,18 @@
+{{ attach_library('hello/scripts_hello') }}
+{% include'@hello/hello-head.html.twig' %}
+<section class="out">
+  {% include '@hello/hello-menu.html.twig' %}
+  <div class="main-title-single" >{{ news.title }}</div>
+  <div class="date">
+    <p>Created: {{ news.date }}</p>
+  </div>
+<div class="new-out-single">
+
+    <div class="content-single" > {{ news.content | raw }} </div>
+
+
+</div>
+</section>
+
+
+{% include '@hello/hello-footer.html.twig' %}

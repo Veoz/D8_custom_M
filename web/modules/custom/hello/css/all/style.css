@@ -24,16 +24,34 @@ div.main-title{
   padding: 20px;
 
 }
+div.main-title-single{
+  font-size: 30px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
 div.new-out{
   border: 1px solid saddlebrown;
   margin: 5px;
 }
-div.title{
+div.title {
   font-size: 24px;
   text-align: center;
   padding: 20px;
 }
-
+a.a-title{
+  text-decoration: none;
+  font-size: 30px;
+  color: #222222;
+}
+div.title:hover{
+  background: #b3b2ad;
+}
+a.a-title:hover{
+  color: #5f3f3f;
+}
+hr{margin: 0}
 div.content{
   padding: 30px;
   text-align: center;
@@ -51,5 +69,17 @@ li.active{
 }
 ul.rer{
   display: flex;
-
+}
+div.date{
+  display: flex;
+  justify-content: flex-end;
+  padding:0 15px 0;
+  box-sizing: border-box;
+}
+div.date p{
+  padding: 0;
+  font-size: 13px;
+  font-style: italic;
+  color: #b3b2ad;
+  text-decoration: underline;
 }

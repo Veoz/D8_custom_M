@@ -1,0 +1,44 @@
+<?php
+
+function news_schema() {
+
+  $schema['a_news'] = [
+    'description' => 'News database',
+    'fields' => [
+      'id' => [
+        'description' => 'ID',
+        'type' => 'serial',
+        'length' => 10,
+        'unsigned' => TRUE,
+        'not null' => TRUE
+      ],
+      'date_create' => [
+        'description' => 'Create date',
+        'mysql_type' => 'TIMESTAMP',
+        'length' => 100,
+        'not null' => TRUE
+      ],
+      'name' => [
+        'description' => 'Name',
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => TRUE
+      ],
+      'description_small' => [
+        'description' => 'Small description',
+        'type' => 'text',
+        'not null' => TRUE,
+        'size' => 'big'
+      ],
+      'description' => [
+        'description' => 'Description',
+        'type' => 'text',
+        'not null' => TRUE,
+        'size' => 'big'
+      ]
+    ],
+    'primary key' => ['id']
+  ];
+
+  return $schema;
+}

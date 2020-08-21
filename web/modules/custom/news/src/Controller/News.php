@@ -6,6 +6,7 @@ use Drupal\Core\Controller\ControllerBase;
 
 class News extends ControllerBase {
 
+
   public function add(){
 
     $addnews = \Drupal::formBuilder()->getform('Drupal\news\Form\Add');

@@ -9,5 +9,13 @@ function hello_theme(){
           'menu' => 'menu',
         ),
       ),
+
+      's_news_theme' =>array(
+        'variables' => array(
+          'menu' => 'menu',
+          'base_url' => 'base_url',
+          'news' => 'news',
+        ),
+      ),
     );
 }
