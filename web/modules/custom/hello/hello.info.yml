@@ -1,0 +1,5 @@
+name: Hello
+description: Say Hello to world
+core: 8.x
+type: module
+package: hello

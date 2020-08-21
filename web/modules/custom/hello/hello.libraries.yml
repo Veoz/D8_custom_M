@@ -1,0 +1,12 @@
+scripts_hello:
+  version: VERSION
+  css:
+    theme:
+      css/fonts/open_sans.css: {}
+      css/all/style.css: {}
+      css/all/style_reg.css: {}
+  js:
+    js/all/main.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once

@@ -1,0 +1,17 @@
+{{ attach_library('hello/scripts_hello') }}
+{% include'@hello/hello-head.html.twig' %}
+<section class="out">
+  {% include '@hello/hello-menu.html.twig' %}
+  <div class="main-title" >{{ data.title }}</div>
+
+  {% for w in data.window %}
+<div class="new-out">
+    <div class="title"> {{ w.title }} </div>
+    <div class="content" > {{ w.content | raw }} </div>
+</div>
+  {% endfor %}
+
+</section>
+
+
+{% include '@hello/hello-footer.html.twig' %}

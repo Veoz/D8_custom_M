@@ -1,0 +1,7 @@
+news.add:
+  path: '/admin/news/add'
+  defaults:
+    _controller: '\Drupal\news\Controller\News::add'
+    _title: 'Welcome to Add news form'
+  requirements:
+    _access: 'TRUE'

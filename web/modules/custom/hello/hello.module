@@ -1,0 +1,13 @@
+<?php
+
+function hello_theme(){
+    return array(
+      'hello_theme' =>array(
+        'variables' => array(
+          'data' => 'data',
+          'base_url' => 'base_url',
+          'menu' => 'menu',
+        ),
+      ),
+    );
+}

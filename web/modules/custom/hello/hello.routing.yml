@@ -1,0 +1,7 @@
+drupal8.first_page:
+  path: '/welcome'
+  defaults:
+    _controller: '\Drupal\hello\Controller\FirstPage::content'
+    _title: 'Welcome'
+  requirements:
+    _permission: 'access content'
