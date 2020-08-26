@@ -1,0 +1,13 @@
+<?php
+
+function about_theme($existing, $type, $theme, $path){
+  return [
+    'about_theme' =>[
+      'variables' =>[
+          'data' => 'data',
+          'base_url' => 'base_url',
+          'menu' => 'menu',
+        ],
+    ],
+  ];
+}

@@ -1,0 +1,15 @@
+#about.about:
+#  path: '/about'
+#  defaults:
+#    _controller: '\Drupal\about\Controller\About::get_about'
+#    _title: 'All about us!'
+#  requirements:
+#    _access: 'TRUE'
+#
+about.first_page:
+  path: '/about'
+  defaults:
+    _controller: '\Drupal\about\Controller\About::get_about'
+    _title: 'Welcome'
+  requirements:
+    _permission: 'access content'

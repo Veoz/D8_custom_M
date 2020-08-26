@@ -1,0 +1,50 @@
+<?php
+
+function news_schema() {
+
+  $schema['a_about'] = [
+    'description' => 'About us database',
+    'fields' => [
+      'id' => [
+        'description' => 'ID',
+        'type' => 'serial',
+        'length' => 10,
+        'unsigned' => TRUE,
+        'not null' => TRUE
+      ],
+      'slogan' => [
+        'description' => 'Main theme',
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => TRUE
+      ],
+      'text' => [
+        'description' => 'Message to users',
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => TRUE
+      ],
+      'tell' => [
+        'description' => 'Contact: telephone',
+        'type' => 'text',
+        'not null' => TRUE,
+        'size' => 'big'
+      ],
+      'mail' => [
+        'description' => 'Contact: E-mail address ',
+        'type' => 'text',
+        'not null' => TRUE,
+        'size' => 'big'
+      ],
+      'img' => [
+        'description' => 'Images',
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => TRUE,
+      ]
+    ],
+    'primary key' => ['id']
+  ];
+
+  return $schema;
+}

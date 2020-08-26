@@ -1,0 +1,5 @@
+scripts_about:
+  version: VERSION
+  css:
+    theme:
+      css/all/style.css: {}

@@ -18,7 +18,7 @@ class Menu {
         ),
       'about' =>
         array(
-          'url' => 'welcome',
+          'url' => 'about',
           'img' => 'contact.swg',
           'style' => 'contact_swg',
           'name' => 'Про нас',

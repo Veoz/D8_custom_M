@@ -17,11 +17,11 @@ class SingleNews {
     $menu = \Drupal\hello\Controller\Menu::menu_data('home');
 
     $news = [];
-    $query = \Drupal::database()->query("SELECT `name`, `description`, `date_create` FROM `a_news` WHERE `id` = :id",[':id' => $id]);
+    $query = \Drupal::database()->query("SELECT `img`,`name`, `description`, `date_create` FROM `a_news` WHERE `id` = :id",[':id' => $id]);
     $result = $query -> fetchAll();
 
     foreach ($result as $row) {
-      $news = ['title' => $row->name,'content' => $row->description, 'date' => $row->date_create,];
+      $news = ['title' => $row->name,'content' => $row->description, 'date' => $row->date_create,'img' => $row->img,];
     }
 
 

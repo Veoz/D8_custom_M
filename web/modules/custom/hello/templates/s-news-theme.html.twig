@@ -6,6 +6,9 @@
   <div class="date">
     <p>Created: {{ news.date }}</p>
   </div>
+  <div class="img">
+    <img src="{{ base_url }}/sites/default/files/my_files/{{ news.img }}" alt="Article picture">
+  </div>
 <div class="new-out-single">
 
     <div class="content-single" > {{ news.content | raw }} </div>

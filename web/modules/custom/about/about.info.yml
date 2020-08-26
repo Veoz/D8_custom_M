@@ -1,0 +1,5 @@
+name: About
+type: module
+description: About us page. For Hello!
+package: hello
+core: 8.x

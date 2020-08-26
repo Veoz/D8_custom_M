@@ -6,7 +6,7 @@ div.logo{
   display: flex;
   justify-content: center;
 }
-img.header-logo{
+a img.header-logo{
   align-items: center;
   width: 300px;
 }
@@ -82,4 +82,7 @@ div.date p{
   font-style: italic;
   color: #b3b2ad;
   text-decoration: underline;
+}
+div.img img{
+  width: 100%;
 }
