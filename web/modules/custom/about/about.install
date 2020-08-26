@@ -1,56 +1,8 @@
 <?php
 
-//function news_schema() {
-////db_create_table() === ERROR
-//  $schema['a_about'] = [
-//    'description' => 'About us database',
-//    'fields' => [
-//      'id' => [
-//        'description' => 'ID',
-//        'type' => 'serial',
-//        'length' => 10,
-//        'unsigned' => TRUE,
-//        'not null' => TRUE
-//      ],
-//      'slogan' => [
-//        'description' => 'Main theme',
-//        'type' => 'varchar',
-//        'length' => 100,
-//        'not null' => TRUE
-//      ],
-//      'text' => [
-//        'description' => 'Message to users',
-//        'type' => 'varchar',
-//        'length' => 100,
-//        'not null' => TRUE
-//      ],
-//      'tell' => [
-//        'description' => 'Contact: telephone',
-//        'type' => 'text',
-//        'not null' => TRUE,
-//        'size' => 'big'
-//      ],
-//      'mail' => [
-//        'description' => 'Contact: E-mail address ',
-//        'type' => 'text',
-//        'not null' => TRUE,
-//        'size' => 'big'
-//      ],
-//      'img' => [
-//        'description' => 'Images',
-//        'type' => 'varchar',
-//        'length' => 100,
-//        'not null' => TRUE,
-//      ]
-//    ],
-//    'primary key' => ['id']
-//  ];
-//
-//  return $schema;
-//}
+function about_schema() {
 
-$record_keep_table = 'a_about';
-  $schema = [
+  $schema['a_about'] = [
     'description' => 'About us database',
     'fields' => [
       'id' => [
@@ -66,23 +18,23 @@ $record_keep_table = 'a_about';
         'length' => 100,
         'not null' => TRUE
       ],
-      'text' => [
-        'description' => 'Message to users',
+      'tell' => [
+        'description' => 'Contact: telephone',
         'type' => 'varchar',
         'length' => 100,
         'not null' => TRUE
       ],
-      'tell' => [
-        'description' => 'Contact: telephone',
+      'text' => [
+        'description' => 'Message to users',
         'type' => 'text',
         'not null' => TRUE,
         'size' => 'big'
       ],
       'mail' => [
         'description' => 'Contact: E-mail address ',
-        'type' => 'text',
-        'not null' => TRUE,
-        'size' => 'big'
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => TRUE
       ],
       'img' => [
         'description' => 'Images',
@@ -93,4 +45,53 @@ $record_keep_table = 'a_about';
     ],
     'primary key' => ['id']
   ];
-\Drupal::database()->schema()->createTable( $record_keep_table, $schema);
+
+  return $schema;
+}
+//db_create_table() hook !!!
+//
+//$record_keep_table = 'a_about';
+//  $schema = [
+//    'description' => 'About us database',
+//    'fields' => [
+//      'id' => [
+//        'description' => 'ID',
+//        'type' => 'serial',
+//        'length' => 10,
+//        'unsigned' => TRUE,
+//        'not null' => TRUE
+//      ],
+//      'slogan' => [
+//        'description' => 'Main theme',
+//        'type' => 'varchar',
+//        'length' => 100,
+//        'not null' => TRUE
+//      ],
+//      'tell' => [
+//        'description' => 'Contact: telephone',
+//        'type' => 'varchar',
+//        'length' => 100,
+//        'not null' => TRUE
+//      ],
+//      'text' => [
+//        'description' => 'Message to users',
+//        'type' => 'text',
+//        'not null' => TRUE,
+//        'size' => 'big'
+//      ],
+//      'mail' => [
+//        'description' => 'Contact: E-mail address ',
+//        'type' => 'varchar',
+//        'length' => 100,
+//        'not null' => TRUE
+//      ],
+//      'img' => [
+//        'description' => 'Images',
+//        'type' => 'varchar',
+//        'length' => 100,
+//        'not null' => TRUE,
+//      ]
+//    ],
+//    'primary key' => ['id']
+//  ];
+//\Drupal::database()->schema()->createTable( $record_keep_table, $schema);

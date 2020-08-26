@@ -1,17 +1,15 @@
-{{ attach_library('hello/scripts_about') }}
-{% include'@hello/hello-head.html.twig' %}
+{{ attach_library('about/scripts_about') }}
+{% include'@about/about-head.html.twig' %}
 <section class="out">
-  {% include '@hello/hello-menu.html.twig' %}
   <div class="main-title" >{{ data.title }}</div>
+  {% include '@hello/hello-menu.html.twig' %}
+
 
   {% for w in data.about %}
-    <div class="about-img">
-      <img src="{{ base_url }}/sites/default/files/my_files/{{ w.img }}" alt="About logo">
-    </div>
 <div class="new-out">
   <div class="title">{{ w.slogan }} </div>
   <hr>
-    <div class="content" > {{ w.text | raw }} </div>
+    <div class="content" ><p class="ppp" > {{ w.text | raw }}</p> </div>
 
   <div class="tell">
     <p>Telephone: {{ w.tell }}</p>
