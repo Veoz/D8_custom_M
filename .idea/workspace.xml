@@ -21,12 +21,14 @@
   <component name="ChangeListManager">
     <list default="true" id="85ef590b-e3d3-4598-8976-aec16225c365" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/web/modules/custom/about/src/Form/Add.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/modules/custom/about/templates/about-edit-theme.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/modules/custom/about/about.module" beforeDir="false" afterPath="$PROJECT_DIR$/web/modules/custom/about/about.module" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/modules/custom/about/about.routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/web/modules/custom/about/about.routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/modules/custom/about/css/all/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/modules/custom/about/css/all/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/modules/custom/about/src/Controller/About.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/modules/custom/about/src/Controller/About.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/modules/custom/about/templates/about-edit-theme.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/web/modules/custom/about/templates/about-edit-theme.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/modules/custom/about/templates/about-head.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/web/modules/custom/about/templates/about-head.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/modules/custom/about/templates/about-theme.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/web/modules/custom/about/templates/about-theme.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/sites/default/files/my_files/170955_0.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/sites/default/files/my_files/170955_1.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/sites/default/files/my_files/about.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/sites/default/files/my_files/about.jpg" afterDir="false" />
@@ -213,7 +215,7 @@
       <workItem from="1598333555121" duration="7977000" />
       <workItem from="1598347915203" duration="12969000" />
       <workItem from="1598421182108" duration="26494000" />
-      <workItem from="1598503915951" duration="19437000" />
+      <workItem from="1598503915951" duration="22043000" />
     </task>
     <servers />
   </component>
@@ -266,10 +268,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2374" y="174" key="SettingsEditor/65.24.1855.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598525454655" />
-    <state x="2560" y="229" width="757" height="594" key="find.popup" timestamp="1598517847806">
+    <state x="2560" y="229" width="757" height="594" key="find.popup" timestamp="1598530902253">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2560" y="229" width="757" height="594" key="find.popup/65.24.1855.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598517847806" />
+    <state x="2560" y="229" width="757" height="594" key="find.popup/65.24.1855.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598530902253" />
     <state x="683" y="248" width="618" height="580" key="find.popup/65.24.1855.1056/1920.0.1920.1080@65.24.1855.1056" timestamp="1597828308873" />
     <state x="2543" y="246" key="run.anything.popup" timestamp="1598434094483">
       <screen x="1920" y="0" width="1920" height="1080" />

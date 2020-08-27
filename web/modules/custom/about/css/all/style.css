@@ -47,3 +47,22 @@ p.ppp{
   letter-spacing: 1.5px;
   line-height: 25px;
 }
+/*edit page start*/
+.slogan form.edit-about{
+  max-width: 70%;
+  padding: 0 15% 0;
+}
+.slogan form.edit-about div{
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
+
+
+}
+.slogan form.edit-about div label{
+  font-weight: bold;
+  margin: 5px 0 5px 0;
+}
+.slogan form.edit-about div .js-text-format-wrapper{
+  min-width: 100%;
+}
