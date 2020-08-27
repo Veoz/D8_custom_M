@@ -5,3 +5,10 @@ about.first_page:
     _title: 'All about us!'
   requirements:
     _access: 'TRUE'
+about.edit_page:
+  path: '/about/edit'
+  defaults:
+    _controller: '\Drupal\about\Controller\About::edit_about'
+    _title: 'All about us!'
+  requirements:
+    _access: 'TRUE'

@@ -4,7 +4,9 @@
 namespace Drupal\about\Controller;
 
 
-class About {
+use Drupal\Core\Controller\ControllerBase;
+
+class About extends ControllerBase {
 
   public function get_about(){
 
@@ -32,6 +34,14 @@ class About {
     );
 
 
+  }
+  public function edit_about(){
+    $edit_about = \Drupal::formBuilder()->getform('Drupal\about\Form\Add');
+
+    return array(
+      '#theme' => 'about_edit_theme',
+      '#edit_about' => $edit_about,
+    );
   }
 
 }

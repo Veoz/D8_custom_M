@@ -9,5 +9,10 @@ function about_theme($existing, $type, $theme, $path){
           'menu' => 'menu',
         ],
     ],
+    'about_edit_theme' => [
+      'variables' =>[
+        'edit_about' => 'edit_about',
+      ],
+    ],
   ];
 }
