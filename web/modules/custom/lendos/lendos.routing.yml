@@ -1,0 +1,7 @@
+lendos.first_page:
+  path: '/lendos'
+  defaults:
+    _controller: 'Drupal\lendos\Controller\Lendos::get_all'
+    _title: 'All about us!'
+  requirements:
+    _access: 'TRUE'

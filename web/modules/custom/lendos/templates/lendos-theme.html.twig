@@ -1,0 +1,29 @@
+{{ attach_library('lendos/scripts_lendos') }}
+{% include'@lendos/lendos-head.html.twig' %}
+<section class="out">
+  <div class="main-title">{{ data.title }}</div>
+
+  <div class="adds"> {{ edit_lendos }}</div>
+
+  {% for w in data.lendos %}
+    <div class="new-out">
+      <div class="title">{{ w.name }} </div>
+      <hr>
+      <div class="content"><p class="ppp"> {{ w.text | raw }}</p></div>
+
+      <div class="tell">
+        <p>Telephone: {{ w.tell }}</p>
+      </div>
+      <div class="mail">
+        <p>E-mail: {{ w.mail }}</p>
+      </div>
+
+    </div>
+  {% endfor %}
+
+
+</section>
+
+
+
+{% include '@lendos/lendos-footer.html.twig' %}

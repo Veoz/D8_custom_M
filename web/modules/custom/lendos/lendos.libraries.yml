@@ -1,0 +1,5 @@
+scripts_lendos:
+  version: VERSION
+  css:
+    theme:
+      css/all/style.css: {}

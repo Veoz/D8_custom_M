@@ -1,0 +1,14 @@
+<?php
+
+function lendos_theme($existing, $type, $theme, $path) {
+  return [
+    'lendos_theme' => [
+      'variables' => [
+        'data'        => 'data',
+        'base_url'    => 'base_url',
+        'edit_lendos' => 'edit_lendos',
+
+      ],
+    ],
+  ];
+}

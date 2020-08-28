@@ -1,0 +1,70 @@
+/*add form start*/
+.adds form.edit-lendos{
+  max-width: 50%;
+  padding: 0 25% 0;
+}
+.adds form.edit-lendos div{
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
+
+
+}
+.adds form.edit-lendos div label{
+  font-weight: bold;
+  margin: 5px 0 5px 0;
+}
+.adds form.edit-lendos div .js-text-format-wrapper{
+  min-width: 100%;
+}
+/* end add form */
+/* start out comments */
+div.about-logo{
+  display: flex;
+  justify-content: center;
+}
+div.about-logo a img{
+  width: 200px;
+}
+section.out{
+  display: flex;
+  flex-direction: column;
+}
+div.main-title{
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 8px;
+}
+
+div.a a{
+  text-decoration: none;
+  color: #b3b2ad;
+  opacity: 0.7;
+}
+li.active{
+  list-style: none;
+  margin: 10px;
+  font-size: 19px;
+  font-weight: 700;
+}
+ul.rer{
+  display: flex;
+  justify-content: center;
+}
+div.new-out{
+  padding: 100px 25% 0 ;
+}
+div.title{
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+p.ppp{
+  letter-spacing: 1.5px;
+  line-height: 25px;
+}
