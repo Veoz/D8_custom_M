@@ -3,19 +3,37 @@
 <section class="out">
   <div class="main-title">{{ data.title }}</div>
 
-  <div class="adds"> {{ edit_lendos }}</div>
+  <div class="adds"> {{ add_lendos }}</div>
 
   {% for w in data.lendos %}
     <div class="new-out">
-      <div class="title">{{ w.name }} </div>
+
+
+      <div class="avatar">
+        <img src="{{ base_url }}/sites/default/files/lendos_avatar/{{ w.avatar }}" alt="avatar">
+        <div class="titles">
+          {{ w.name }}
+          <div class="edit">
+            <a href="{{ base_url }}/admin/lendos/edit" class="edit">Edit</a>
+            <a href="{{ base_url }}/admin/lendos/remove" class="remove">Remove</a>
+          </div>
+        </div>
+      </div>
+      <div class="date">{{ w.date }}</div>
+
       <hr>
+      {% if w.img == 'none' %}
+
+      {% else %}
+        <img src="{{ base_url }}/sites/default/files/lendos_file/{{ w.img }}"  class="media-com" alt="Comment media file">
+      {% endif %}
       <div class="content"><p class="ppp"> {{ w.text | raw }}</p></div>
 
       <div class="tell">
-        <p>Telephone: {{ w.tell }}</p>
+        <p> <b>Telephone:</b> {{ w.tell }}</p>
       </div>
       <div class="mail">
-        <p>E-mail: {{ w.mail }}</p>
+        <p><b>E-mail:</b> {{ w.mail }}</p>
       </div>
 
     </div>

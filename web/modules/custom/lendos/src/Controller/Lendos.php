@@ -15,7 +15,7 @@ class Lendos extends ControllerBase {
 
 
     $query = \Drupal::database()->select('a_lendos', 'n');
-    $query->fields('n', ['name', 'mail', 'tell', 'text', 'img']);
+    $query->fields('n', ['name', 'mail', 'tell', 'text', 'img','date_create','avatar',]);
     $result = $query->execute()->fetchAll();
 
 
@@ -26,6 +26,8 @@ class Lendos extends ControllerBase {
         'tell' => $row->tell,
         'mail' => $row->mail,
         'img'  => $row->img,
+        'date' => $row->date_create,
+        'avatar' => $row-> avatar,
       ]);
     }
 
@@ -33,13 +35,13 @@ class Lendos extends ControllerBase {
       'title'  => 'LENDOS',
       'lendos' => $lendos,
     ];
-    $edit_lendos = \Drupal::formBuilder()->getform('Drupal\lendos\Form\Add');
+    $add_lendos = \Drupal::formBuilder()->getform('Drupal\lendos\Form\Add');
 
     return [
       '#theme'       => 'lendos_theme',
       '#data'        => $data,
       '#base_url'    => $base_url,
-      '#edit_lendos' => $edit_lendos,
+      '#add_lendos' => $add_lendos,
     ];
 
   }

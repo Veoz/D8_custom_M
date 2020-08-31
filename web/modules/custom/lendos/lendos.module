@@ -6,9 +6,24 @@ function lendos_theme($existing, $type, $theme, $path) {
       'variables' => [
         'data'        => 'data',
         'base_url'    => 'base_url',
+        'add_lendos' => 'add_lendos',
+
+      ],
+    ],
+    'lendos_edit_theme' => [
+      'variables' => [
+        'base_url'    => 'base_url',
         'edit_lendos' => 'edit_lendos',
 
       ],
     ],
+    'lendos_remove_theme' => [
+      'variables' => [
+        'base_url'    => 'base_url',
+        'remove_lendos' => 'remove_lendos',
+
+      ],
+    ],
   ];
+
 }

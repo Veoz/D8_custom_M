@@ -42,6 +42,12 @@ function lendos_schema() {
         'length'      => 100,
         'not null'    => TRUE,
       ],
+      'avatar'  => [
+        'description' => 'Avatar',
+        'type'        => 'varchar',
+        'length'      => 100,
+        'not null'    => TRUE,
+      ],
       'date_create' => [
         'description' => 'Create date',
         'mysql_type' => 'TIMESTAMP',

@@ -1,50 +1,69 @@
 <?php
 
+
 namespace Drupal\lendos\Form;
+
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
-
-class Add extends FormBase {
+class Edit  extends FormBase {
 
   public function getFormId() {
-    return 'add_lendos';
+    return 'edit_lendos';
   }
 
   public function buildForm(array $form, FormStateInterface $form_state) {
 
+    $query = \Drupal::database()->select('a_lendos', 'n');
+    $query->fields('n', ['name', 'mail', 'tell', 'text', 'img','avatar','id']);
+    $result = $query->execute()->fetchAll();
+
+    foreach ($result as $value) {
+      $edit = [
+        'name' => $value->name,
+        'tell'   => $value->tell,
+        'text'   => $value->text,
+        'mail'   => $value->mail,
+        'img'    => $value->img,
+        'avatar' => $value->avatar,
+        'id' => $value->id,
+      ];
+    }
+    $form_state->set('Comment_id', $edit['id']);
+    $form_state->set('Comment_avatar', $edit['avatar']);
+    $form_state->set('Comment_img', $edit['img']);
     $form['name'] = [
       '#type'          => 'textfield',
-      '#title'         => 'Вкажіть ваше ім\'я',
+      '#title'         => 'Вкажіть ваше нове ім\'я',
       '#required'      => TRUE,
+      '#default_value' => $edit['name'],
     ];
     $form['tell']   = [
       '#type'          => 'textfield',
-      '#title'         => 'Залиште вашу електронну адресу тут, і ми з вами зв\'яжемось',
+      '#title'         => 'Залиште вашу нову електронну адресу тут, і ми з вами зв\'яжемось',
       '#required'      => TRUE,
+      '#default_value' => $edit['tell'],
+
     ];
     $form['mail']   = [
       '#type'          => 'textfield',
-      '#title'         => 'Залиште ваш номер телефону тут, і ми з вами зв\'яжемось',
+      '#title'         => 'Залиште ваш новий номер телефону тут, і ми з вами зв\'яжемось',
       '#required'      => TRUE,
-    ];
+      '#default_value' => $edit['mail'],
 
+    ];
     $form['text']              = [
       '#type'          => 'text_format',
       '#format'        => 'full_html',
-      '#title'         => 'Залиште ваш відгук тут, будь ласка.',
-//      '#attributes'    => [
-//      ],
-//      '#required'      => TRUE,
-//      '#cols'          => 60,
-//      '#resizable'     => TRUE,
-//      '#rows'          => 13,
+      '#title'         => 'Залиште ваш новий відгук тут, будь ласка.',
+      '#default_value' => $edit['text'],
+
     ];
     $form['my_file']           = [
       '#type'            => 'managed_file',
       '#name'            => 'my_file',
-      '#title'           => t('Додати зоображення'),
+      '#title'           => t('Змініть зоображення за необхідності'),
       '#description'     => t('Виберіть картинку для коментаря.(до 5 мб)' .
         '.'),
       '#upload_location' => 'public://lendos_file/',
@@ -57,7 +76,7 @@ class Add extends FormBase {
     $form['avatar']           = [
       '#type'            => 'managed_file',
       '#name'            => 'avatar',
-      '#title'           => t('Avatar'),
+      '#title'           => t('Змініть ваш Аватар за необхідності'),
       '#description'     => t('Виберіть Ваш аватар. (до 2 мб)'),
       '#upload_location' => 'public://lendos_avatar/',
       '#upload_validators' => [
@@ -75,24 +94,17 @@ class Add extends FormBase {
   }
 
   public function validateForm(array &$form, FormStateInterface $form_state) {
-//    $validators = [
-//      'file_validate_is_image'   => [],
-//      // Проверка, действительно ли файл является изображением
-//      'file_validate_extensions' => ['png gif jpg jpeg'],
-//      // Проверка на расширения
-//    ];
-
     $name = $form_state->getValue('name');
     if (iconv_strlen($name) < 5 || iconv_strlen($name) > 100) {
       $form_state->setErrorByName('title', $this->t('Назва має містити від 5 до 100 символів'));
     }
   }
 
-
   public function submitForm(array &$form, FormStateInterface $form_state) {
 
+
     if (empty($form['my_file']['#value']['fids']) == TRUE) {
-      $filenames = 'none';
+      $filenames = $form_state->get('Comment_img');
     }
     else {
       $files     = \Drupal::entityTypeManager()->getStorage('file')
@@ -101,7 +113,7 @@ class Add extends FormBase {
     }
 
     if (empty($form['avatar']['#value']['fids']) == TRUE) {
-      $avatar = 'default_avatar.png';
+      $avatar = $form_state->get('Comment_avatar');
     }
     else {
       $files     = \Drupal::entityTypeManager()->getStorage('file')
@@ -110,8 +122,9 @@ class Add extends FormBase {
     }
 
 
-
-    $query = \Drupal::database()->insert('a_lendos');
+    $id = $form_state->get('Comment_id');
+    $query = \Drupal::database()->update('a_lendos');
+    $query->condition('id', $id , '=');
     $query->fields([
       'name' => "{$form_state->getValue('name')}",
       'tell'   => "{$form_state -> getValue('tell')}",
@@ -122,9 +135,9 @@ class Add extends FormBase {
     ]);
 
     $query->execute();
+    $form_state->setRedirect('lendos.first_page');
 
 
   }
-
 
 }
