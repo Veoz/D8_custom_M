@@ -16,6 +16,7 @@ class Lendos extends ControllerBase {
 
     $query = \Drupal::database()->select('a_lendos', 'n');
     $query->fields('n', ['name', 'mail', 'tell', 'text', 'img','date_create','avatar',]);
+    $query->orderBy('date_create','DESC' );
     $result = $query->execute()->fetchAll();
 
 

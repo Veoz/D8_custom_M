@@ -24,7 +24,6 @@
       <change afterPath="$PROJECT_DIR$/web/modules/custom/lendos/src/Controller/Remove.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/web/modules/custom/lendos/src/Form/Edit.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/web/modules/custom/lendos/src/Form/Remove.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/modules/custom/lendos/templates/lendos-remove-theme.html.twig" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/web/sites/default/files/lendos_avatar/default_avatar.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/modules/custom/lendos/css/all/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/modules/custom/lendos/css/all/style.css" afterDir="false" />
@@ -33,6 +32,7 @@
       <change beforePath="$PROJECT_DIR$/web/modules/custom/lendos/lendos.routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/web/modules/custom/lendos/lendos.routing.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/modules/custom/lendos/src/Controller/Lendos.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/modules/custom/lendos/src/Controller/Lendos.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/modules/custom/lendos/src/Form/Add.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/modules/custom/lendos/src/Form/Add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/modules/custom/lendos/templates/lendos-remove-theme.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/web/modules/custom/lendos/templates/lendos-remove-theme.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/modules/custom/lendos/templates/lendos-theme.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/web/modules/custom/lendos/templates/lendos-theme.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/sites/default/files/lendos_file/1021182.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/sites/default/files/lendos_file/1021182.jpg" afterDir="false" />
     </list>
@@ -222,7 +222,7 @@
       <workItem from="1598592686145" duration="599000" />
       <workItem from="1598595995215" duration="15838000" />
       <workItem from="1598621481302" duration="420000" />
-      <workItem from="1598852817452" duration="13739000" />
+      <workItem from="1598852817452" duration="20287000" />
     </task>
     <servers />
   </component>
@@ -284,6 +284,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2543" y="246" key="run.anything.popup/65.24.1855.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598434094483" />
+    <state x="2543" y="236" width="672" height="678" key="search.everywhere.popup" timestamp="1598877161670">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2543" y="236" width="672" height="678" key="search.everywhere.popup/65.24.1855.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598877161670" />
     <state x="2610" y="371" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1598858429264">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
