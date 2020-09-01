@@ -15,13 +15,14 @@ class Lendos extends ControllerBase {
 
 
     $query = \Drupal::database()->select('a_lendos', 'n');
-    $query->fields('n', ['name', 'mail', 'tell', 'text', 'img','date_create','avatar',]);
+    $query->fields('n', ['name', 'mail', 'tell', 'text', 'img','date_create','avatar','id']);
     $query->orderBy('date_create','DESC' );
     $result = $query->execute()->fetchAll();
 
 
     foreach ($result as $row) {
       array_push($lendos, [
+        'id' => $row->id,
         'name' => $row->name,
         'text' => $row->text,
         'tell' => $row->tell,

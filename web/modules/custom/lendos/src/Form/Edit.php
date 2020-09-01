@@ -13,10 +13,11 @@ class Edit  extends FormBase {
     return 'edit_lendos';
   }
 
-  public function buildForm(array $form, FormStateInterface $form_state) {
+  public function buildForm(array $form, FormStateInterface $form_state, $id = 0) {
 
     $query = \Drupal::database()->select('a_lendos', 'n');
     $query->fields('n', ['name', 'mail', 'tell', 'text', 'img','avatar','id']);
+    $query->condition('id', $id, '=');
     $result = $query->execute()->fetchAll();
 
     foreach ($result as $value) {

@@ -24,6 +24,19 @@ function lendos_theme($existing, $type, $theme, $path) {
 
       ],
     ],
+    'comments' => [
+      'variables' => [
+        'base_url'    => 'base_url',
+        'data' => 'data',
+
+
+      ],
+    ],
+    'success_add_ajax' => [
+      'variables' => [
+        'base_url'    => 'base_url',
+      ],
+    ],
   ];
 
 }

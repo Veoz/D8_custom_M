@@ -12,10 +12,11 @@ class Remove extends FormBase {
     return 'remove_lendos';
   }
 
-  public function buildForm(array $form, FormStateInterface $form_state) {
+  public function buildForm(array $form, FormStateInterface $form_state, $id = 0) {
 
     $query = \Drupal::database()->select('a_lendos', 'n');
     $query->fields('n', ['id']);
+    $query->condition('id', $id, '=');
     $result = $query->execute()->fetchAll();
 
 

@@ -20,21 +20,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85ef590b-e3d3-4598-8976-aec16225c365" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/modules/custom/lendos/src/Controller/Edit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/modules/custom/lendos/src/Controller/Remove.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/modules/custom/lendos/src/Form/Edit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/modules/custom/lendos/src/Form/Remove.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/sites/default/files/lendos_avatar/default_avatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/modules/custom/lendos/css/all/success.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/modules/custom/lendos/templates/comments.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/modules/custom/lendos/templates/error-add-ajax.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/modules/custom/lendos/templates/success-add-ajax.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/modules/custom/lendos/css/all/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/modules/custom/lendos/css/all/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/modules/custom/lendos/lendos.install" beforeDir="false" afterPath="$PROJECT_DIR$/web/modules/custom/lendos/lendos.install" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/modules/custom/lendos/lendos.libraries.yml" beforeDir="false" afterPath="$PROJECT_DIR$/web/modules/custom/lendos/lendos.libraries.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/modules/custom/lendos/lendos.module" beforeDir="false" afterPath="$PROJECT_DIR$/web/modules/custom/lendos/lendos.module" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/modules/custom/lendos/lendos.routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/web/modules/custom/lendos/lendos.routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/modules/custom/lendos/src/Controller/Edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/modules/custom/lendos/src/Controller/Edit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/modules/custom/lendos/src/Controller/Lendos.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/modules/custom/lendos/src/Controller/Lendos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/modules/custom/lendos/src/Controller/Remove.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/modules/custom/lendos/src/Controller/Remove.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/modules/custom/lendos/src/Form/Add.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/modules/custom/lendos/src/Form/Add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/modules/custom/lendos/templates/lendos-remove-theme.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/web/modules/custom/lendos/templates/lendos-remove-theme.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/modules/custom/lendos/src/Form/Edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/modules/custom/lendos/src/Form/Edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/modules/custom/lendos/src/Form/Remove.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/modules/custom/lendos/src/Form/Remove.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/modules/custom/lendos/templates/lendos-theme.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/web/modules/custom/lendos/templates/lendos-theme.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/sites/default/files/lendos_file/1021182.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/sites/default/files/lendos_file/1021182.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sites/default/files/lendos_avatar/170955_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sites/default/files/lendos_avatar/778965_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sites/default/files/lendos_avatar/778965_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sites/default/files/lendos_avatar/about.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sites/default/files/lendos_avatar/img6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sites/default/files/lendos_avatar/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sites/default/files/lendos_avatar/logo_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sites/default/files/lendos_avatar/look.com_.ua-84732.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sites/default/files/lendos_avatar/look.com_.ua-84732_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sites/default/files/lendos_avatar/look.com_.ua-84732_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sites/default/files/lendos_avatar/meny.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sites/default/files/lendos_file/1021182_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sites/default/files/lendos_file/1021182_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sites/default/files/lendos_file/170955_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sites/default/files/lendos_file/170955_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sites/default/files/lendos_file/603183111.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sites/default/files/lendos_file/778965.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sites/default/files/lendos_file/about.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sites/default/files/lendos_file/thumb-1920-782434.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sites/default/files/lendos_file/thumb-1920-782434_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sites/default/files/lendos_file/thumb-1920-782434_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sites/default/files/lendos_file/thumb-1920-782434_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sites/default/files/lendos_file/thumb-1920-927025.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sites/default/files/lendos_file/thumb-1920-927025_0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/sites/default/files/lendos_file/thumb-1920-927025_1.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +199,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/sites/default/files/lendos_avatar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/modules/custom/lendos/templates" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -184,19 +210,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/web/sites/default/files/lendos_avatar" />
-      <recent name="$PROJECT_DIR$/web/sites/default/files/lendos_file" />
-      <recent name="$PROJECT_DIR$/web/modules/custom/lendos/templates" />
-      <recent name="$PROJECT_DIR$/web/modules/custom/lendos" />
-      <recent name="$PROJECT_DIR$/web/modules/custom/about/src" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web/modules/custom/about/src/Controller" />
       <recent name="$PROJECT_DIR$/web/modules/custom/About" />
       <recent name="$PROJECT_DIR$/web/themes/custom" />
       <recent name="$PROJECT_DIR$/web/modules/custom/hello" />
       <recent name="$PROJECT_DIR$/web/modules/custom/hello/src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/modules/custom/lendos/templates" />
+      <recent name="$PROJECT_DIR$/web/sites/default/files/lendos_avatar" />
+      <recent name="$PROJECT_DIR$/web/sites/default/files/lendos_file" />
+      <recent name="$PROJECT_DIR$/web/modules/custom/lendos" />
+      <recent name="$PROJECT_DIR$/web/modules/custom/about/src" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -222,7 +248,9 @@
       <workItem from="1598592686145" duration="599000" />
       <workItem from="1598595995215" duration="15838000" />
       <workItem from="1598621481302" duration="420000" />
-      <workItem from="1598852817452" duration="20287000" />
+      <workItem from="1598852817452" duration="20750000" />
+      <workItem from="1598939331021" duration="17960000" />
+      <workItem from="1598962655120" duration="6913000" />
     </task>
     <servers />
   </component>
@@ -275,10 +303,14 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2374" y="174" key="SettingsEditor/65.24.1855.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598525454655" />
-    <state x="2560" y="229" width="757" height="594" key="find.popup" timestamp="1598863434918">
+    <state x="2495" y="153" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1598942281916">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2560" y="229" width="757" height="594" key="find.popup/65.24.1855.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598863434918" />
+    <state x="2495" y="153" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/65.24.1855.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598942281916" />
+    <state x="2560" y="229" width="757" height="606" key="find.popup" timestamp="1598963904122">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2560" y="229" width="757" height="606" key="find.popup/65.24.1855.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598963904122" />
     <state x="683" y="248" width="618" height="580" key="find.popup/65.24.1855.1056/1920.0.1920.1080@65.24.1855.1056" timestamp="1597828308873" />
     <state x="2543" y="246" key="run.anything.popup" timestamp="1598434094483">
       <screen x="1920" y="0" width="1920" height="1080" />

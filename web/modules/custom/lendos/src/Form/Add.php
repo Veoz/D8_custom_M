@@ -6,10 +6,13 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\Core\Ajax\HtmlCommand;
-use Drupal\Core\Ajax\ReplaceCommand;
+//use Drupal\Core\Ajax\ReplaceCommand;
+//use PhpParser\Node\Stmt\Unset_;
 
 
 class Add extends FormBase {
+
+
 
   public function getFormId() {
     return 'add_lendos';
@@ -22,20 +25,23 @@ class Add extends FormBase {
       '#title'    => 'Вкажіть ваше ім\'я',
       '#required' => TRUE,
     ];
-    $form['tell']              = [
-      '#type'     => 'textfield',
+    $form['mail']              = [
+      '#type'     => 'email',
       '#title'    => 'Залиште вашу електронну адресу тут, і ми з вами зв\'яжемось',
       '#required' => TRUE,
     ];
-    $form['mail']              = [
+    $form['tell']              = [
       '#type'     => 'textfield',
       '#title'    => 'Залиште ваш номер телефону тут, і ми з вами зв\'яжемось',
       '#required' => TRUE,
     ];
     $form['text']              = [
-      '#type'   => 'text_format',
-      '#format' => 'full_html',
+      '#type'   => 'textarea',
       '#title'  => 'Залиште ваш відгук тут, будь ласка.',
+      '#required' => TRUE,
+      '#cols' => 60,
+      '#rows' => 13,
+
     ];
     $form['my_file']           = [
       '#type'              => 'managed_file',
@@ -111,9 +117,10 @@ class Add extends FormBase {
       'name'   => "{$form_state->getValue('name')}",
       'tell'   => "{$form_state -> getValue('tell')}",
       'mail'   => "{$form_state -> getValue('mail')}",
-      'text'   => "{$form_state -> getValue('text')['value']}",
+      'text'   => "{$form_state -> getValue('text')}",
       'img'    => $filenames,
       'avatar' => $avatar,
+
     ]);
 
     $query->execute();
@@ -123,29 +130,85 @@ class Add extends FormBase {
 
 
   public function ajaxSubmitCallback(array &$form, FormStateInterface $form_state) {
+    $comment = $this->getInfo();
+
     $ajax_response = new AjaxResponse();
-    $message       = [
-      '#theme'           => 'status_messages',
-      '#message_list'    => drupal_get_messages(),
-      '#status_headings' => [
-        'status'  => t('Status message'),
-        'error'   => t('Error message'),
-        'warning' => t('Warning message'),
-      ],
-    ];
-    $messages      = \Drupal::service('renderer')->render($message);
+
 
     if ($form_state->hasAnyErrors()) {
-      $ajax_response->addCommand(new HtmlCommand('#form-system-messages', $messages));
+      $er = $this->errorForm();
+      $ajax_response->addCommand(new HtmlCommand('#comment', $er));
     }
     else {
-      $ajax_response->addCommand(new HtmlCommand('#form-system-messages', ''));
-//      $ajax_response->addCommand(new HtmlCommand('#add-lendos', $form));
-      $ajax_response->addCommand(new ReplaceCommand('#add-lendos', $form));
+      $ok = $this->successForm();
+      $ajax_response->addCommand(new HtmlCommand('#add-lendos', $ok));
+      $ajax_response->addCommand(new HtmlCommand('#comment', $comment));
+
     }
 
     return $ajax_response;
 
+  }
+
+  public function getInfo() {
+    global $base_url;
+
+    $lendos = [];
+
+    $query = \Drupal::database()->select('a_lendos', 'n');
+        $query->fields('n', [
+          'name',
+          'mail',
+          'tell',
+          'text',
+          'img',
+          'avatar',
+          'id',
+          'date_create',
+        ]);
+        $query->orderBy('id', "DESC");
+    $result = $query->execute()->fetchAll();
+
+    foreach ($result as $row) {
+      array_push($lendos, [
+        'name' => $row->name,
+        'text' => $row->text,
+        'tell' => $row->tell,
+        'mail' => $row->mail,
+        'img'  => $row->img,
+        'date' => $row->date_create,
+        'avatar' => $row-> avatar,
+      ]);
+    }
+
+    $data = [
+      'lendos' => $lendos,
+
+    ];
+
+  ;
+
+    unset($add_lendos);
+    return array(
+      '#theme' => 'comments',
+      '#data' => $data,
+      '#base_url' => $base_url,
+    );
+  }
+
+  public function successForm(){
+    global $base_url;
+    return[
+      '#theme' => 'success_add_ajax',
+      '#base_url' => $base_url,
+    ];
+  }
+  public function errorForm(){
+    global $base_url;
+    return[
+      '#theme' => 'eroor_add_ajax',
+      '#base_url' => $base_url,
+    ];
   }
 
 }

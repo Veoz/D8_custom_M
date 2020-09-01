@@ -3,3 +3,4 @@ scripts_lendos:
   css:
     theme:
       css/all/style.css: {}
+      css/all/success.css: {}
