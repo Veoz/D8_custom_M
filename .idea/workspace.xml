@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="85ef590b-e3d3-4598-8976-aec16225c365" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/web/modules/custom/lendos/css/all/success.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/modules/custom/lendos/templates/comments.html.twig" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/web/modules/custom/lendos/templates/error-add-ajax.html.twig" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/web/modules/custom/lendos/templates/success-add-ajax.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -35,6 +34,7 @@
       <change beforePath="$PROJECT_DIR$/web/modules/custom/lendos/src/Form/Add.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/modules/custom/lendos/src/Form/Add.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/modules/custom/lendos/src/Form/Edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/modules/custom/lendos/src/Form/Edit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/modules/custom/lendos/src/Form/Remove.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/modules/custom/lendos/src/Form/Remove.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/modules/custom/lendos/templates/comments.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/web/modules/custom/lendos/templates/comments.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/modules/custom/lendos/templates/lendos-theme.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/web/modules/custom/lendos/templates/lendos-theme.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/sites/default/files/lendos_avatar/170955_0.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/sites/default/files/lendos_avatar/778965_0.png" beforeDir="false" />
@@ -250,7 +250,7 @@
       <workItem from="1598621481302" duration="420000" />
       <workItem from="1598852817452" duration="20750000" />
       <workItem from="1598939331021" duration="17960000" />
-      <workItem from="1598962655120" duration="6913000" />
+      <workItem from="1598962655120" duration="11093000" />
     </task>
     <servers />
   </component>
@@ -307,10 +307,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2495" y="153" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/65.24.1855.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598942281916" />
-    <state x="2560" y="229" width="757" height="606" key="find.popup" timestamp="1598963904122">
+    <state x="2560" y="229" width="758" height="616" key="find.popup" timestamp="1598972435795">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2560" y="229" width="757" height="606" key="find.popup/65.24.1855.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598963904122" />
+    <state x="2560" y="229" width="758" height="616" key="find.popup/65.24.1855.1056/1920.0.1920.1080@1920.0.1920.1080" timestamp="1598972435795" />
     <state x="683" y="248" width="618" height="580" key="find.popup/65.24.1855.1056/1920.0.1920.1080@65.24.1855.1056" timestamp="1597828308873" />
     <state x="2543" y="246" key="run.anything.popup" timestamp="1598434094483">
       <screen x="1920" y="0" width="1920" height="1080" />

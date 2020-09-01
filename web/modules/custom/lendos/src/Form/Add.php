@@ -6,12 +6,11 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\Core\Ajax\HtmlCommand;
-//use Drupal\Core\Ajax\ReplaceCommand;
-//use PhpParser\Node\Stmt\Unset_;
+use Drupal\Core\Ajax\ReplaceCommand;
+use PhpParser\Node\Stmt\Unset_;
 
 
 class Add extends FormBase {
-
 
 
   public function getFormId() {
@@ -36,11 +35,11 @@ class Add extends FormBase {
       '#required' => TRUE,
     ];
     $form['text']              = [
-      '#type'   => 'textarea',
-      '#title'  => 'Залиште ваш відгук тут, будь ласка.',
+      '#type'     => 'textarea',
+      '#title'    => 'Залиште ваш відгук тут, будь ласка.',
       '#required' => TRUE,
-      '#cols' => 60,
-      '#rows' => 13,
+      '#cols'     => 60,
+      '#rows'     => 13,
 
     ];
     $form['my_file']           = [
@@ -85,9 +84,10 @@ class Add extends FormBase {
 
   public function validateForm(array &$form, FormStateInterface $form_state) {
     $name = $form_state->getValue('name');
-    if (iconv_strlen($name) < 5 || iconv_strlen($name) > 100) {
-      $form_state->setErrorByName('title', $this->t('Назва має містити від 5 до 100 символів'));
+    if (iconv_strlen($name) < 3 || iconv_strlen($name) > 100) {
+      $form_state->setErrorByName('name', $this->t('ім\'я має містити від 3 до 100 символів'));
     }
+
   }
 
 
@@ -136,8 +136,9 @@ class Add extends FormBase {
 
 
     if ($form_state->hasAnyErrors()) {
-      $er = $this->errorForm();
-      $ajax_response->addCommand(new HtmlCommand('#comment', $er));
+
+//      $ajax_response->addCommand(new HtmlCommand('#add-lendos', $erno));
+      $ajax_response->addCommand(new HtmlCommand('#comment', $comment));
     }
     else {
       $ok = $this->successForm();
@@ -156,28 +157,28 @@ class Add extends FormBase {
     $lendos = [];
 
     $query = \Drupal::database()->select('a_lendos', 'n');
-        $query->fields('n', [
-          'name',
-          'mail',
-          'tell',
-          'text',
-          'img',
-          'avatar',
-          'id',
-          'date_create',
-        ]);
-        $query->orderBy('id', "DESC");
+    $query->fields('n', [
+      'name',
+      'mail',
+      'tell',
+      'text',
+      'img',
+      'avatar',
+      'id',
+      'date_create',
+    ]);
+    $query->orderBy('id', "DESC");
     $result = $query->execute()->fetchAll();
 
     foreach ($result as $row) {
       array_push($lendos, [
-        'name' => $row->name,
-        'text' => $row->text,
-        'tell' => $row->tell,
-        'mail' => $row->mail,
-        'img'  => $row->img,
-        'date' => $row->date_create,
-        'avatar' => $row-> avatar,
+        'name'   => $row->name,
+        'text'   => $row->text,
+        'tell'   => $row->tell,
+        'mail'   => $row->mail,
+        'img'    => $row->img,
+        'date'   => $row->date_create,
+        'avatar' => $row->avatar,
       ]);
     }
 
@@ -186,27 +187,18 @@ class Add extends FormBase {
 
     ];
 
-  ;
 
-    unset($add_lendos);
-    return array(
-      '#theme' => 'comments',
-      '#data' => $data,
-      '#base_url' => $base_url,
-    );
-  }
-
-  public function successForm(){
-    global $base_url;
-    return[
-      '#theme' => 'success_add_ajax',
+    return [
+      '#theme'    => 'comments',
+      '#data'     => $data,
       '#base_url' => $base_url,
     ];
   }
-  public function errorForm(){
+
+  public function successForm() {
     global $base_url;
-    return[
-      '#theme' => 'eroor_add_ajax',
+    return [
+      '#theme'    => 'success_add_ajax',
       '#base_url' => $base_url,
     ];
   }
