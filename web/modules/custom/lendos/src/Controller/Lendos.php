@@ -29,7 +29,7 @@ class Lendos extends ControllerBase {
         'mail' => $row->mail,
         'img'  => $row->img,
         'date' => $row->date_create,
-        'avatar' => $row-> avatar,
+        'avatar' => $row->avatar,
       ]);
     }
 

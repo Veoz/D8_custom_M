@@ -1,11 +1,12 @@
 {{ attach_library('lendos/scripts_lendos') }}
-{% include'@lendos/lendos-head.html.twig' %}
-<section class="out" >
-  <div class="main-title">{{ data.title }}</div>
-  <div class="errors">
+<div class="errors">
     <div id="form-system-messages" class="form-system-messages">
     </div>
   </div>
+{% include'@lendos/lendos-head.html.twig' %}
+<section class="out" >
+  <div class="main-title">{{ data.title }}</div>
+  
   <div class="adds">{{ add_lendos }}</div>
 
 

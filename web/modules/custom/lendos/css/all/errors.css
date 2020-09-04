@@ -3,7 +3,7 @@ div.errors{
   justify-content: center;
 }
 div.form-system-messages {
-  width: 52%;
+  width: 60%;
 
 }
 div.form-system-messages ul{
@@ -11,13 +11,18 @@ div.form-system-messages ul{
 }
 div.form-system-messages li{
   list-style: none;
-  padding: 5px 0 5px;
+  padding: 5px;  
+  
+  margin: 10px;
+
 
 }
 div.form-system-messages div div div {
   padding: 10px;
   margin: 20px;
-  border: 1px solid red;
+  background: #ff0000ad;
+  color:#fafe00;
   text-transform: uppercase;
   text-align: center;
+  border-radius: 10px;
 }
