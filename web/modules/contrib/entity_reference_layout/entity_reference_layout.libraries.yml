@@ -1,0 +1,24 @@
+dragula:
+  remote: https://github.com/bevacqua/dragula
+  verion: 3.7.2
+  license:
+    name: MIT
+    url: https://github.com/bevacqua/dragula/blob/master/license
+    gpl-compatible: true
+  css:
+    theme:
+      https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.css: {type: external, minified: true}
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js: {type: external, minified: true}
+
+erl_widget:
+  css:
+    layout:
+      css/erl-widget.css: {}
+  js:
+    js/erl-widget.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.ui.dialog
+    - core/drupal.ajax
+    - entity_reference_layout/dragula

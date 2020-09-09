@@ -1,0 +1,7 @@
+entity_reference_layout.settings:
+  path: '/admin/config/content/entity_reference_layout'
+  defaults:
+    _form: '\Drupal\entity_reference_layout\Form\EntityReferenceLayoutSettingsForm'
+    _title: 'Entity Reference Layout general settings'
+  requirements:
+    _permission: 'administer site configuration'

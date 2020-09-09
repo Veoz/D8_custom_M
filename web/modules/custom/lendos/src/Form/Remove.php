@@ -12,8 +12,15 @@ class Remove extends FormBase {
     return 'remove_lendos';
   }
 
+  /**
+   * @param   array                                 $form
+   * @param   \Drupal\Core\Form\FormStateInterface  $form_state
+   * @param   int                                   $id
+   *
+   * @return array
+   */
   public function buildForm(array $form, FormStateInterface $form_state, $id = 0) {
-
+// create button for delete comment by id
     $query = \Drupal::database()->select('a_lendos', 'n');
     $query->fields('n', ['id']);
     $query->condition('id', $id, '=');
@@ -40,19 +47,15 @@ class Remove extends FormBase {
 
   }
 
+  /**
+   * @param   array                                 $form
+   * @param   \Drupal\Core\Form\FormStateInterface  $form_state
+   */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-
-
-
-
     $id = $form_state->get('Comment_id');
     $query = \Drupal::database()->delete('a_lendos');
     $query->condition('id', $id , '=');
-
-
     $query->execute();
     $form_state->setRedirect('lendos.first_page');
-
-
   }
 }

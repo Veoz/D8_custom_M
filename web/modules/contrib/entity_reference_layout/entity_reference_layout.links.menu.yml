@@ -1,0 +1,4 @@
+entity_reference_layout.settings:
+  title: 'Entity Reference Layout settings'
+  parent: system.admin_config_content
+  route_name: entity_reference_layout.settings

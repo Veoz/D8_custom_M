@@ -1,0 +1,5 @@
+name: Attendee
+type: module
+description: Entity test module.
+package: Entity
+core: 8.x

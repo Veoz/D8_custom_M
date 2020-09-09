@@ -1,0 +1,35 @@
+entity.attendee.canonical:
+  path: '/attendee/{attendee}'
+  defaults:
+    _entity_view: 'attendee'
+    _title: 'Attendee'
+  requirements:
+    _access: 'TRUE'
+entity.atteendee.add_form:
+  path: '/attendee/add'
+  defaults:
+    _entity_form: attendee.add
+    _title: 'Add Attendee'
+  requirements:
+    _access: 'TRUE'
+entity.attendee.edit_form:
+  path: '/attendee/{attendee}/edit'
+  defaults:
+    _entity_form: attendee.edit
+    _title: 'Edit Attendee'
+  requirements:
+    _access: 'TRUE'
+entity.attendee.delete_form:
+  path: 'attendee/{attendee}/delete'
+  defaults:
+    _entity_form: attendee.delete
+    _title: 'Edit Attendee'
+  requirements:
+    _access: 'TRUE'
+entity.attendee.collection:
+  path: '/attendee/list'
+  defaults:
+    _entity_list: 'attendee'
+    _title: 'Atteendee List'
+  requirements:
+    _access: 'TRUE'

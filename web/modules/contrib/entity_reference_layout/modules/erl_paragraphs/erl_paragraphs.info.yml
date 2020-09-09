@@ -1,0 +1,12 @@
+name: 'Entity Reference Layout Paragraphs'
+type: module
+description: 'Provides default paragraph types for Entity Reference with Layout'
+core_version_requirement: ^8.8 || ^9
+package: 'Paragraphs'
+dependencies:
+  - drupal:entity_reference_layout
+
+# Information added by Drupal.org packaging script on 2020-06-09
+version: '8.x-1.0-alpha7'
+project: 'entity_reference_layout'
+datestamp: 1591726669
